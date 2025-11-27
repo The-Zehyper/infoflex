@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Flex City News</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  @keyframes neonPulse {
+    0% { box-shadow: 0 0 10px rgba(124,58,237,0.5); }
+    50% { box-shadow: 0 0 20px rgba(6,182,212,0.5); }
+    100% { box-shadow: 0 0 10px rgba(124,58,237,0.5); }
+  }
+  .glow { animation: neonPulse 2s ease-in-out infinite; }
+
+  @keyframes flicker {
+    0%,100% { opacity:1 }
+    50% { opacity:0.85 }
+  }
+  .flicker { animation: flicker 3s infinite; }
+</style>
+</head>
+
+<body class="bg-[#070d1f] text-slate-100">
+
+<!-- SECTION HEADER -->
+<section class="min-h-screen py-10 px-6 lg:px-20">
+
+  <!-- HEADER -->
+  <header class="flex items-center gap-4 mb-10">
+    
+    <!-- LOGO FOTO -->
+    <div class="glow p-2 rounded-2xl bg-gradient-to-br from-purple-600/20 to-cyan-400/10">
+      <div class="w-16 h-16 rounded-xl overflow-hidden flex items-center justify-center bg-gradient-to-br from-purple-600 to-cyan-400">
+        <img src="fotoflex.jpg" alt="Flex City Logo" class="w-full h-full object-cover" />
+      </div>
+    </div>
+
+    <div>
+      <h1 class="text-3xl font-extrabold tracking-tight">
+        Info Resmi <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-300 to-cyan-200">Flex City</span>
+      </h1>
+      <p class="text-slate-400 text-sm">
+        Update patch, event, tournament & info penting — join Discord biar ga ketinggalan info terbaru!  
+        https://discord.gg/flexcitygame
+      </p>
+    </div>
+  </header>
+
+  <!-- GRID BERITA -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <!-- CARD BERITA 1 -->
+    <article class="bg-[#0b152c] border border-slate-800 rounded-2xl p-6 hover:scale-[1.03] transition-all cursor-pointer shadow-xl"
+      onclick="openNews('update1')">
+      <h3 class="text-xl font-bold flicker">Update 1.6.4</h3>
+      <p class="text-slate-300 mt-3 text-sm">
+        • Apartemen pemain  
+        • Garasi  
+        • Mode baru: Custom Room  
+        • Tutorial redesign  
+        • Parkour upgrade  
+        • Reward iklan baru  
+        • Event spesial  
+        • Bug fix
+      </p>
+      <button class="mt-4 text-purple-300 underline text-sm">Baca selengkapnya</button>
+    </article>
+
+    <!-- CARD BERITA 2 -->
+    <article class="bg-[#0b152c] border border-slate-800 rounded-2xl p-6 hover:scale-[1.03] transition-all cursor-pointer shadow-xl"
+      onclick="openNews('event1')">
+      <h3 class="text-xl font-bold flicker">Flex City Event</h3>
+      <p class="text-slate-300 mt-3 text-sm">
+        Belum ada event baru untuk saat ini.
+      </p>
+      <button class="mt-4 text-purple-300 underline text-sm">Baca selengkapnya</button>
+    </article>
+
+    <!-- CARD BERITA 3 -->
+    <article class="bg-[#0b152c] border border-slate-800 rounded-2xl p-6 hover:scale-[1.03] transition-all cursor-pointer shadow-xl"
+      onclick="openNews('guide')">
+      <h3 class="text-xl font-bold flicker">Panduan Pemula</h3>
+      <p class="text-slate-300 mt-3 text-sm">
+        Cara cepat naik level dan membuat gang.
+      </p>
+      <button class="mt-4 text-purple-300 underline text-sm">Baca selengkapnya</button>
+    </article>
+
+  </div>
+</section>
+
+<!-- SECTION TENTANG GAME -->
+<section class="py-16 px-6 lg:px-20">
+  <div class="bg-[#0b152c] border border-slate-800 rounded-2xl p-8 shadow-xl">
+    
+    <h2 class="text-3xl font-bold mb-4 bg-gradient-to-r from-purple-300 to-cyan-200 bg-clip-text text-transparent">
+      Tentang Flex City
+    </h2>
+
+    <p class="text-slate-300 leading-relaxed text-sm">
+      RP di dunia terbuka! Roleplay. Simulator kehidupan. Mobil. Game grand.
+
+Flex City - Pengalaman Berkendara dan Balapan di Dunia Sandbox Terbaik
+
+Tantang dirimu dalam pengalaman sandbox terbaik bersama Flex City, di mana sensasi menegangkan dari game mengemudi dan balapan menjadi sorotan utama. Masuki dunia terbuka yang luas dan tentukan jalanmu dalam petualangan otomotif besar yang penuh dengan balapan mobil dan motor, kompetisi drifting, dan kehidupan kriminal berisiko tinggi. Bergabunglah dalam geng dan kuasai jalanan dalam game sandbox multipemain online ini, di mana setiap keputusan membentuk takdirmu di kota gangster yang penuh warna.
+
+FITUR GAME
+
+Perang Geng dan Aliansi Strategis:
+
+Di Flex City, perang geng bukan sekadar pertempuran jalanan; ini adalah perebutan kekuasaan yang rumit dan memerlukan pemikiran strategis serta aliansi. Bentuk atau bergabunglah dengan geng, bangun aliansi, dan navigasikan politik dunia bawah tanah dalam game sandbox multipemain yang intens ini. Rasakan serunya pertempuran wilayah dan tantangan dalam menjaga hubungan di lanskap aliansi kota gangster yang terus berubah.
+
+Dunia Terbuka yang Luas dan Dinamis:
+
+Dunia terbuka di Flex City tidak hanya luas; tetapi juga penuh dengan kehidupan dan peluang. Dari gedung pencakar langit hingga jalanan kumuh, setiap sudut dari petualangan otomotif besar ini menawarkan pertemuan unik dan penemuan menarik. Jelajahi berbagai lingkungan dengan karakter dan rahasia masing-masing, menjadikan eksplorasi sebagai bagian penting dari pengalaman game berkendara sandbox.
+
+Simulator Mengemudi yang Realistis:
+
+Simulator mengemudi di Flex City dirancang dengan cermat, memberikan pengalaman mengemudi mobil kelas atas. Pilih dari berbagai kendaraan, masing-masing dengan karakteristik penanganan dan performa yang unik. Kustomisasi mobilmu untuk berbagai misi, nikmati kejar-kejaran berkecepatan tinggi, atau sekadar berkendara santai di dunia terbuka. Fitur ini meningkatkan standar dalam game mengemudi, balapan, dan kompetisi drifting.
+
+Sistem Tembak-Menembak dan Pertarungan yang Canggih:
+
+Sebagai salah satu game tembak-menembak unggulan, Flex City menawarkan sistem pertarungan yang kuat. Terlibat dalam baku tembak taktis, gunakan perlindungan, dan kuasai berbagai gaya menembak. Gudang senjata dalam game ini beragam, dari pistol hingga senjata berat, masing-masing memberikan pengalaman bertarung yang unik di dunia kriminal.
+
+Kustomisasi Karakter yang Mendalam:
+
+Aspek roleplay dalam Flex City diperkaya dengan opsi kustomisasi karakter yang mendalam. Bentuk penampilan, keterampilan, dan bahkan moral karaktermu. Pilihanmu dalam pakaian, senjata, dan keterampilan secara langsung memengaruhi interaksi dan reputasimu di kota gangster, menyatu sempurna dengan elemen mengemudi dan kriminal besar dalam game.
+
+Sistem Ekonomi yang Kompleks:
+
+Sistem ekonomi di Flex City menambahkan lapisan strategi dalam petualangan otomotif besar ini. Terlibat dalam berbagai aktivitas legal maupun ilegal untuk mengembangkan kerajaan finansialmu. Berdagang, berinvestasi, dan gunakan kecerdikan ekonomimu untuk mendapatkan keunggulan di dunia kriminal.
+
+Acara Komunitas dan Misi:
+
+Game sandbox multipemain ini terus berkembang dengan acara komunitas, misi, dan tantangan baru. Ikuti misi kooperatif, bersaing dalam acara berbasis geng, dan berpartisipasi dalam aktivitas komunitas skala besar yang menyatukan pemain dengan cara yang seru.
+
+Flex City bukan sekadar game! Ini adalah dunia terbuka yang kaya dan kompleks di mana sandbox, mengemudi, dan game balapan menyatu secara mulus. Masuki game sandbox multipemain online yang imersif ini dan tentukan jalanmu dalam kota gangster yang mendebarkan.
+----------------------------------
+YANG PALING PENTING JIKA ANDA TIDAK MAU KETINGGALAN INFO UPDATE ATAU EVENT FLEX CITY BISA GABUNG DISCORD SAJA KARENA AKAN DI INFOKAN LEWAT SANA!
+
+    </p>
+
+    <!-- DISCORD -->
+    <div class="mt-8">
+      <a href="https://discord.gg/YOUR_LINK" target="_blank"
+        class="px-6 py-3 text-lg font-semibold rounded-xl bg-gradient-to-r from-indigo-500 to-blue-400 hover:scale-110 transition-all shadow-lg">
+         Join Discord Flex City
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- MODAL BERITA -->
+<div id="modal" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4 backdrop-blur-sm">
+  <div class="bg-[#0c182f] max-w-lg w-full rounded-2xl p-6 border border-slate-700 shadow-2xl">
+    <h2 id="modalTitle" class="text-2xl font-bold mb-3"></h2>
+    <p id="modalContent" class="text-slate-300 text-sm leading-relaxed whitespace-pre-line"></p>
+
+    <button onclick="closeNews()" class="mt-6 px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-400 rounded-lg font-semibold">
+      Tutup
+    </button>
+  </div>
+</div>
+
+<script>
+  const newsData = {
+    update1: {
+      title: "Update 1.6.4",
+      content: `Update 1.6.4 menghadirkan:
+• Apartemen pemain
+• Garasi
+• Mode permainan baru: Custom Room
+• Tutorial yang didesain ulang
+• Sistem parkour ditingkatkan
+• Hadiah baru untuk iklan
+• Event spesial
+• Perbaikan bug kecil`
+    },
+
+    event1: {
+      title: "Flex City Event",
+      content: `Event:
+Belum ada event baru untuk saat ini.`
+    },
+
+    guide: {
+      title: "Panduan Pemula Flex City",
+      content: `Tips naik level lebih cepat:
+• Mulai bekerja sebagai kurir pizza  
+• Cari teman & gabung komunitas  
+• Ikuti misi kota  
+• Kumpulkan uang untuk buka gang  
+• Mulai petualangan dan grinding EXP`
+    }
+  };
+
+  function openNews(key) {
+    document.getElementById('modal').classList.remove('hidden');
+    document.getElementById('modalTitle').innerText = newsData[key].title;
+    document.getElementById('modalContent').innerText = newsData[key].content;
+  }
+
+  function closeNews() {
+    document.getElementById('modal').classList.add('hidden');
+  }
+</script>
+
+</body>
+</html>
